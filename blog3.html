@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="aRvF_VawhyACcyfSczO3Eakuhg88CRdhordQgw61PX4">
+
+  <title>Theme Decoration Service in Mohali | Destination Wedding Planner in Chandigarh</title>
+
+  <meta name="description" content="Looking for Theme Decoration Service in Mohali or a destination wedding planner in Chandigarh? TCC Events offers theme decor, wedding planning, venue styling, vendor coordination and complete event management." />
+
+  <meta name="keywords" content="Theme Decoration Service in Mohali, theme decoration service Mohali, destination wedding planner in Chandigarh, destination weeding planner in chandigarh, wedding decor Mohali, event planner Chandigarh, TCC Events" />
+
+  <style>
+    :root {
+      --primary: #071c36;
+      --secondary: #c59b3b;
+      --accent: #f3d27a;
+      --cream: #fff8e6;
+      --light: #fffdf6;
+      --text: #182333;
+      --muted: #5d6b7a;
+      --white: #ffffff;
+      --border: #ead59b;
+      --shadow: 0 18px 45px rgba(7, 28, 54, 0.16);
+      --soft-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+      background: #f8f5ee;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 14px 28px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      border-radius: 24px;
+      margin: 0 0 26px;
+      padding: 70px 32px;
+      background:
+        linear-gradient(115deg, rgba(7,28,54,0.95), rgba(197,155,59,0.72)),
+        url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -120px auto;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: rgba(243, 210, 122, 0.25);
+      filter: blur(2px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 820px;
+    }
+
+    .tagline {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      color: var(--accent);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 54px);
+      line-height: 1.08;
+      margin: 0 0 16px;
+      letter-spacing: -1.2px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 0 26px;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .buttons a,
+    .final-cta a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      color: var(--secondary);
+      padding: 12px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transition: 0.2s ease;
+    }
+
+    .buttons a.secondary-btn {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.34);
+    }
+
+    .buttons a:hover,
+    .final-cta a:hover {
+      background: var(--accent);
+      color: #071c36;
+      transform: translateY(-1px);
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: -44px 22px 26px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .info-card {
+      background: var(--white);
+      padding: 18px;
+      border-radius: 18px;
+      box-shadow: var(--soft-shadow);
+      border: 1px solid rgba(234, 213, 155, 0.78);
+    }
+
+    .info-card span {
+      display: block;
+      color: var(--secondary);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .info-card p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .section {
+      background: var(--white);
+      padding: 34px 28px;
+      border-radius: 24px;
+      box-shadow: var(--soft-shadow);
+      margin: 0 0 24px;
+      border: 1px solid rgba(234, 213, 155, 0.68);
+    }
+
+    .section h2 {
+      color: var(--primary);
+      font-size: clamp(23px, 3vw, 32px);
+      line-height: 1.25;
+      margin: 0 0 12px;
+      letter-spacing: -0.35px;
+    }
+
+    .section h3 {
+      color: var(--secondary);
+      font-size: 19px;
+      margin: 0 0 8px;
+    }
+
+    .section p {
+      font-size: 16px;
+      margin: 0 0 15px;
+      color: var(--text);
+    }
+
+    .section a {
+      color: var(--primary);
+      font-weight: 800;
+      text-decoration: none;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .section a:hover {
+      color: var(--secondary);
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #fff8e6, #fffdf6);
+      border-left: 5px solid var(--secondary);
+      padding: 20px;
+      border-radius: 18px;
+      margin: 22px 0;
+    }
+
+    .highlight strong {
+      color: var(--primary);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .split-image {
+      border-radius: 22px;
+      overflow: hidden;
+      min-height: 360px;
+      background: var(--light);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .split-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 4px;
+    }
+
+    .services li {
+      background: var(--light);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 15px 16px;
+      border-radius: 16px;
+      font-weight: 800;
+      font-size: 15px;
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+    }
+
+    .services li::before {
+      content: "✦";
+      color: var(--secondary);
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 24px 0 0;
+    }
+
+    .image-card {
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--light);
+      box-shadow: var(--soft-shadow);
+      border: 1px solid rgba(234, 213, 155, 0.72);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-card div {
+      padding: 16px;
+    }
+
+    .image-card p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .step {
+      background: var(--cream);
+      border-radius: 18px;
+      padding: 18px;
+      border: 1px solid var(--border);
+    }
+
+    .step span {
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--accent);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .local-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, var(--primary), #0f2f56);
+      color: var(--white);
+      padding: 26px;
+      border-radius: 22px;
+      height: 100%;
+    }
+
+    .contact-box h2 {
+      color: var(--white);
+      margin: 0 0 14px;
+    }
+
+    .contact-box p {
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0 0 13px;
+    }
+
+    .contact-box a {
+      color: var(--accent);
+      border-bottom: none;
+    }
+
+    .map-box {
+      width: 100%;
+      border-radius: 22px;
+      overflow: hidden;
+      min-height: 390px;
+      box-shadow: var(--soft-shadow);
+      border: 1px solid rgba(234, 213, 155, 0.78);
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 390px;
+      border: 0;
+      display: block;
+    }
+
+    .faq {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .faq-item {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .faq-item h3 {
+      color: var(--primary);
+    }
+
+    .faq-item p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .final-cta {
+      background:
+        linear-gradient(135deg, rgba(197,155,59,0.88), rgba(7,28,54,0.96)),
+        url("https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+      color: var(--white);
+      text-align: center;
+      padding: 42px 24px;
+      border-radius: 24px;
+      margin: 0;
+      box-shadow: var(--shadow);
+    }
+
+    .final-cta h2 {
+      color: var(--white);
+      margin: 0 0 10px;
+      font-size: clamp(25px, 3.5vw, 38px);
+    }
+
+    .final-cta p {
+      color: rgba(255, 255, 255, 0.92);
+      max-width: 780px;
+      margin: 0 auto 20px;
+      font-size: 17px;
+    }
+
+    .final-cta .cta-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .content-keywords {
+      font-weight: 800;
+      color: var(--secondary);
+    }
+
+    @media (max-width: 900px) {
+      .quick-info,
+      .split,
+      .local-box,
+      .image-grid,
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-info {
+        margin: -26px 10px 22px;
+      }
+
+      .hero {
+        padding: 48px 22px;
+      }
+
+      .section {
+        padding: 26px 20px;
+      }
+
+      .split-image,
+      .split-image img,
+      .map-box,
+      .map-box iframe {
+        min-height: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <section class="hero">
+      <div class="hero-content">
+        <span class="tagline">TCC Events • Decor • Weddings • Celebrations</span>
+        <h1>Theme Decoration Service in Mohali & Destination Wedding Planner in Chandigarh</h1>
+        <p>
+          Make your celebration look beautiful, organized, and memorable with TCC Events. From
+          <strong>Theme Decoration Service in Mohali</strong> to complete support as a
+          <strong>destination wedding planner in Chandigarh</strong>, we manage decor, venue styling,
+          vendor coordination, guest experience, and event execution with a refined approach.
+        </p>
+
+        <div class="buttons">
+          <a href="https://tccevents.in/" target="_blank" rel="noopener">Visit Website</a>
+          <a href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener" class="secondary-btn">View Local Location</a>
+          <a href="tel:9915730029">Call 9915730029</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="quick-info">
+      <div class="info-card">
+        <span>Main Service</span>
+        <p>Theme decor, wedding styling, family functions, corporate events, birthdays, and luxury celebrations.</p>
+      </div>
+      <div class="info-card">
+        <span>Local Reach</span>
+        <p>Available for Mohali, Chandigarh, Panchkula, Zirakpur, Kharar, and nearby Tricity locations.</p>
+      </div>
+      <div class="info-card">
+        <span>Visit TCC Events</span>
+        <p>Plot No. 177 G, Industrial Area Phase I, Chandigarh, 160002.</p>
+      </div>
+    </div>
+
+    <section class="section split">
+      <div>
+        <h2>Theme Decoration Service in Mohali for Elegant Events</h2>
+        <p>
+          If you are searching for a professional <strong>Theme Decoration Service in Mohali</strong>,
+          TCC Events helps you turn your venue into a complete celebration experience. We plan the theme,
+          design the decor, style the stage, manage floral elements, create beautiful backdrops, and coordinate
+          every setup detail as per your occasion.
+        </p>
+        <p>
+          Our <strong>Theme Decoration Service in Mohali</strong> is suitable for weddings, engagement ceremonies,
+          birthday parties, anniversary celebrations, baby showers, corporate events, festive functions, and private
+          family gatherings. You can explore more about TCC Events on the official website:
+          <a href="https://tccevents.in/" target="_blank" rel="noopener">https://tccevents.in/</a>.
+        </p>
+        <div class="highlight">
+          <strong>Planning an event in Mohali?</strong> Connect with TCC Events for theme planning, decor design,
+          venue setup, and complete execution. Get directions from our local listing on
+          <a href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener">Google Maps</a>
+          or call <a href="tel:9915730029">9915730029</a>.
+        </div>
+      </div>
+
+      <div class="split-image">
+        <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1000&q=80" alt="Theme Decoration Service in Mohali by TCC Events for elegant event decor">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Destination Wedding Planner in Chandigarh for Premium Wedding Celebrations</h2>
+      <p>
+        A destination wedding needs more than beautiful decor. It needs planning, hospitality, travel coordination,
+        vendor management, venue styling, timelines, and on-ground execution. As a trusted
+        <strong>destination wedding planner in Chandigarh</strong>, TCC Events supports families and couples who want
+        their wedding functions to feel smooth, stylish, and well-managed.
+      </p>
+      <p>
+        Whether you are planning a palace-style wedding, a resort celebration, a hill destination wedding,
+        a luxury hotel wedding, or a private venue celebration, TCC Events works as your
+        <strong>destination wedding planner in Chandigarh</strong> to manage the complete event flow from concept to execution.
+      </p>
+
+      <div class="image-grid">
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Destination wedding planner in Chandigarh for wedding decor and ceremony planning">
+          <div>
+            <h3>Wedding Decor</h3>
+            <p>Elegant mandap, entrance, floral, stage, lounge, and ceremony styling for memorable wedding moments.</p>
+          </div>
+        </div>
+
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=80" alt="Theme Decoration Service in Mohali for engagement and wedding functions">
+          <div>
+            <h3>Theme Styling</h3>
+            <p>Customized theme decoration service in Mohali for modern, traditional, luxury, and family celebrations.</p>
+          </div>
+        </div>
+
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=80" alt="Event management and venue coordination by TCC Events Chandigarh">
+          <div>
+            <h3>Event Execution</h3>
+            <p>Vendor follow-ups, venue coordination, guest flow, timelines, setup checks, and complete on-day support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Our Decoration & Wedding Planning Services</h2>
+      <p>
+        TCC Events combines creative ideas with practical event management. Our team offers
+        <strong>Theme Decoration Service in Mohali</strong> and complete wedding planning support for clients who want
+        a beautiful celebration without the stress of handling everything themselves.
+      </p>
+
+      <ul class="services">
+        <li>Theme Decoration Service in Mohali</li>
+        <li>Destination Wedding Planning</li>
+        <li>Venue Decoration & Styling</li>
+        <li>Stage & Backdrop Design</li>
+        <li>Mandap & Wedding Decor</li>
+        <li>Floral Decoration</li>
+        <li>Entry Gate & Welcome Setup</li>
+        <li>Engagement Ceremony Decor</li>
+        <li>Haldi & Mehndi Decoration</li>
+        <li>Birthday Theme Decoration</li>
+        <li>Vendor Coordination</li>
+        <li>Complete Event Execution</li>
+      </ul>
+    </section>
+
+    <section class="section split">
+      <div class="split-image">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80" alt="Theme decoration and destination wedding planning by TCC Events">
+      </div>
+
+      <div>
+        <h2>Why Choose TCC Events?</h2>
+        <p>
+          TCC Events focuses on creating celebrations that look premium and feel well-organized. When you choose us for
+          <strong>Theme Decoration Service in Mohali</strong>, you get a team that understands decor planning, theme flow,
+          space utilization, color combinations, and event-day setup management.
+        </p>
+        <p>
+          As a <strong>destination wedding planner in Chandigarh</strong>, we also help with venue coordination, vendor support,
+          decor execution, guest experience, function-wise planning, and complete event management for weddings in Chandigarh,
+          Mohali, Panchkula, Zirakpur, and nearby destination locations.
+        </p>
+
+        <ul class="services">
+          <li>Personalized Event Themes</li>
+          <li>Premium Decor Concepts</li>
+          <li>Reliable Vendor Network</li>
+          <li>Smooth Coordination</li>
+          <li>Creative Wedding Styling</li>
+          <li>On-Ground Management</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How We Plan Your Event</h2>
+      <p>
+        From first discussion to final setup, TCC Events follows a clear process so your event looks beautiful and runs smoothly.
+        This approach helps us deliver better <strong>Theme Decoration Service in Mohali</strong> and dependable support as your
+        <strong>destination wedding planner in Chandigarh</strong>.
+      </p>
+
+      <div class="process">
+        <div class="step">
+          <span>1</span>
+          <h3>Requirement Discussion</h3>
+          <p>We understand your event type, guest count, budget, venue, preferred theme, and expectations.</p>
+        </div>
+        <div class="step">
+          <span>2</span>
+          <h3>Theme & Decor Planning</h3>
+          <p>We create a decor direction with colors, stage ideas, floral styling, entry setup, and venue flow.</p>
+        </div>
+        <div class="step">
+          <span>3</span>
+          <h3>Vendor & Venue Coordination</h3>
+          <p>We coordinate with the venue and vendors to keep all planning, setup, and execution aligned.</p>
+        </div>
+        <div class="step">
+          <span>4</span>
+          <h3>Final Event Execution</h3>
+          <p>Our team manages the setup, checks the details, and supports the event flow on the final day.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Local Theme Decoration Service in Mohali & Chandigarh Tricity</h2>
+      <p>
+        TCC Events offers <strong>Theme Decoration Service in Mohali</strong> for clients across Mohali, Kharar, Landran,
+        Airport Road, Sector 70, Sector 71, Phase 7, Phase 8, Phase 10, New Chandigarh, Zirakpur, Panchkula, and Chandigarh.
+        Our Chandigarh office location also makes it easy for clients to meet and discuss their decor or wedding planning requirements.
+      </p>
+      <p>
+        If you are looking for a <strong>destination wedding planner in Chandigarh</strong>, you can visit our website,
+        check our Google Business Profile, or call us to discuss wedding planning, theme decoration, venue styling,
+        and complete event coordination.
+      </p>
+
+      <div class="local-box">
+        <div class="contact-box">
+          <h2>Contact TCC Events</h2>
+          <p><strong>Website:</strong> <a href="https://tccevents.in/" target="_blank" rel="noopener">https://tccevents.in/</a></p>
+          <p><strong>Google Business Profile:</strong> <a href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener">View Local Location on Google Maps</a></p>
+          <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener">Plot No. 177 G, Industrial Area Phase I, Chandigarh, 160002</a></p>
+          <p><strong>Map Coordinates:</strong> 30.742183213844264, 76.79006746230999</p>
+          <p><strong>Phone:</strong> <a href="tel:9915730029">9915730029</a></p>
+        </div>
+
+        <div class="map-box">
+          <iframe
+            src="https://www.google.com/maps?q=30.742183213844264,76.79006746230999&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <h3>Do you provide Theme Decoration Service in Mohali?</h3>
+          <p>
+            Yes, TCC Events provides <strong>Theme Decoration Service in Mohali</strong> for weddings, birthdays, engagements,
+            anniversaries, corporate events, festive events, and private celebrations.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can TCC Events work as a destination wedding planner in Chandigarh?</h3>
+          <p>
+            Yes, TCC Events works as a <strong>destination wedding planner in Chandigarh</strong> and helps with venue styling,
+            decor planning, vendor coordination, guest experience, and complete event management.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Which areas do you cover?</h3>
+          <p>
+            We serve Chandigarh, Mohali, Panchkula, Zirakpur, Kharar, New Chandigarh, and nearby Tricity locations.
+            For directions, visit our <a href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener">Google Maps location</a>.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How can I discuss my event requirement?</h3>
+          <p>
+            You can call <a href="tel:9915730029">9915730029</a>, visit the official website
+            <a href="https://tccevents.in/" target="_blank" rel="noopener">TCC Events</a>, or visit the office at
+            Plot No. 177 G, Industrial Area Phase I, Chandigarh, 160002.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <h2>Book TCC Events for Your Next Celebration</h2>
+      <p>
+        Need <strong>Theme Decoration Service in Mohali</strong> or a trusted
+        <strong>destination wedding planner in Chandigarh</strong>? Connect with TCC Events for theme decor,
+        wedding styling, venue coordination, vendor management, and complete event execution.
+      </p>
+      <div class="cta-links">
+        <a href="https://tccevents.in/" target="_blank" rel="noopener">Visit Website</a>
+        <a href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener">Get Directions</a>
+        <a href="tel:9915730029">Call Now</a>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
