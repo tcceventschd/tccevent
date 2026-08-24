@@ -104,13 +104,17 @@
   .service-card h3{font-size:19px;margin-bottom:10px;}
   .service-card p{font-size:14.5px;color:#5c584f;margin:0;}
 
-  /* gallery */
-  .gallery{margin-top:44px;column-count:3;column-gap:14px;}
-  .gallery figure{margin:0 0 14px;break-inside:avoid;position:relative;overflow:hidden;border-radius:2px;cursor:pointer;}
-  .gallery img{width:100%;display:block;transition:transform 0.5s ease;}
-  .gallery figure:hover img{transform:scale(1.06);}
-  .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 14px 12px;background:linear-gradient(0deg, rgba(20,39,32,0.85), transparent);color:#fff;font-size:13px;letter-spacing:0.4px;opacity:0;transition:0.3s ease;}
-  .gallery figure:hover figcaption{opacity:1;}
+  /* gallery - animated sliding carousel */
+  .gallery-viewport{margin-top:44px;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);mask-image:linear-gradient(90deg, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);}
+  .gallery{display:flex;gap:16px;width:max-content;animation:slideTrack 46s linear infinite;}
+  .gallery:hover{animation-play-state:paused;}
+  @keyframes slideTrack{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+  .gallery figure{flex:0 0 auto;width:280px;height:360px;margin:0;position:relative;overflow:hidden;border-radius:2px;cursor:pointer;}
+  .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s ease;}
+  .gallery figure:hover img{transform:scale(1.08);}
+  .g-num{position:absolute;top:14px;left:14px;z-index:2;background:rgba(20,39,32,0.72);color:var(--marigold-soft);font-family:'Fraunces',serif;font-size:12.5px;letter-spacing:1.5px;padding:5px 11px;border:1px solid rgba(240,196,101,0.4);}
+  .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 14px 14px;background:linear-gradient(0deg, rgba(20,39,32,0.9), transparent);color:#fff;font-size:13px;letter-spacing:0.4px;}
+  .gallery-note{margin-top:16px;font-size:13.5px;color:#6b675e;}
 
   /* lightbox */
   .lightbox{position:fixed;inset:0;background:rgba(20,25,20,0.94);display:none;align-items:center;justify-content:center;z-index:999;padding:30px;}
@@ -188,14 +192,14 @@
   @media(max-width:920px){
     .intro-grid,.contact-grid,.why-grid,.service-grid,.testi-track{grid-template-columns:1fr;}
     .stats .wrap{grid-template-columns:repeat(2,1fr);row-gap:20px;}
-    .gallery{column-count:2;}
+    .gallery figure{width:220px;height:290px;}
     .process-row{flex-direction:column;gap:26px;}
     .process-row::before{display:none;}
     .intro-photo .badge{position:static;margin-top:16px;max-width:none;}
     .topbar .wrap{justify-content:center;text-align:center;}
   }
   @media(max-width:560px){
-    .gallery{column-count:1;}
+    .gallery figure{width:190px;height:250px;}
     .service-grid{grid-template-columns:1fr;}
   }
 </style>
@@ -227,7 +231,7 @@
   <div class="wrap hero-inner">
     <span class="eyebrow">Chandigarh · Mohali · Panchkula · Tricity</span>
     <h1>The <i>best wedding planner</i><br>in Chandigarh, for weddings<br>that feel entirely yours</h1>
-    <p>From an intimate roka to a full destination wedding, TCC Events plans, designs and runs every celebration — weddings, corporate events, birthdays and social gatherings — with an in-house creative team, not a checklist.</p>
+    <p>From an intimate roka to a full destination wedding, TCC Events plans, designs and runs every celebration across Chandigarh, Mohali, Panchkula and Zirakpur — weddings, corporate events, birthdays and social gatherings — with an in-house creative team, not a checklist.</p>
     <div class="hero-cta">
       <a class="btn btn-solid" href="tel:9915730029">Call 9915730029</a>
       <a class="btn btn-ghost" href="#gallery">See Our Work</a>
@@ -238,10 +242,10 @@
 
 <div class="stats">
   <div class="wrap">
-    <div class="stat"><b>450+</b><span>Celebrations Styled</span></div>
+    <div class="stat"><b>450+</b><span>Celebrations in Chandigarh, Mohali &amp; Panchkula</span></div>
     <div class="stat"><b>9 Yrs</b><span>Planning Experience</span></div>
-    <div class="stat"><b>60+</b><span>Partner Venues</span></div>
-    <div class="stat"><b>4.8★</b><span>Client Rating</span></div>
+    <div class="stat"><b>60+</b><span>Partner Venues, Tricity</span></div>
+    <div class="stat"><b>4.8★</b><span><a href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Google Maps Rating</a></span></div>
   </div>
 </div>
 
@@ -270,12 +274,12 @@
     <span class="tag">What We Plan</span>
     <h2>One team for every celebration on your calendar</h2>
     <div class="service-grid">
-      <div class="service-card"><span class="service-num">Wedding</span><h3>Wedding Planner in Chandigarh</h3><p>Full-service wedding planning — mandap, entrance, stage and floral design, managed start to finish.</p></div>
-      <div class="service-card"><span class="service-num">Destination</span><h3>Destination Wedding Planner in Chandigarh</h3><p>Hill-station, resort and out-of-city weddings with travel, hospitality and on-ground execution handled for you.</p></div>
-      <div class="service-card"><span class="service-num">Decor</span><h3>Theme Decoration Service in Mohali</h3><p>Custom themes for weddings, engagements and family functions across Mohali and the Tricity.</p></div>
-      <div class="service-card"><span class="service-num">Corporate</span><h3>Corporate Event Organisers in Chandigarh</h3><p>Launches, conferences and award nights — branded, on-schedule, and built around your audience.</p></div>
-      <div class="service-card"><span class="service-num">Birthday</span><h3>Birthday Party Organisers in Chandigarh</h3><p>Themed birthday decoration for kids, adults and milestone birthdays, wherever you're celebrating.</p></div>
-      <div class="service-card"><span class="service-num">Retail</span><h3>Mall Decor Planner in Chandigarh</h3><p>Seasonal displays and brand activations designed to pull footfall and hold attention.</p></div>
+      <div class="service-card"><span class="service-num">Wedding</span><h3>Wedding Planner in Chandigarh</h3><p>Full-service wedding planning in Chandigarh — mandap, entrance, stage and floral design, managed start to finish.</p></div>
+      <div class="service-card"><span class="service-num">Destination</span><h3>Destination Wedding Planner in Chandigarh</h3><p>Hill-station, resort and out-of-city weddings planned from our Chandigarh base, with travel, hospitality and on-ground execution handled for you.</p></div>
+      <div class="service-card"><span class="service-num">Decor</span><h3>Theme Decoration Service in Mohali</h3><p>Custom themes for weddings, engagements and family functions across Mohali, Kharar and the wider Tricity.</p></div>
+      <div class="service-card"><span class="service-num">Corporate</span><h3>Corporate Event Organisers in Chandigarh</h3><p>Launches, conferences and award nights across Chandigarh and Panchkula — branded, on-schedule, and built around your audience.</p></div>
+      <div class="service-card"><span class="service-num">Birthday</span><h3>Birthday Party Organisers in Chandigarh</h3><p>Themed birthday decoration for kids, adults and milestone birthdays across Chandigarh, Mohali and Zirakpur.</p></div>
+      <div class="service-card"><span class="service-num">Retail</span><h3>Mall Decor Planner in Chandigarh</h3><p>Seasonal displays and brand activations for malls and retail spaces across Chandigarh and Panchkula.</p></div>
     </div>
   </div>
 </section>
@@ -283,19 +287,33 @@
 <section class="section" id="gallery">
   <div class="wrap">
     <span class="tag">Our Work</span>
-    <h2>A look inside real weddings and events we've styled</h2>
-    <div class="gallery">
-      <figure onclick="openLightbox(0)"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Wedding ceremony decor by TCC Events"><figcaption>Mandap & Ceremony Styling</figcaption></figure>
-      <figure onclick="openLightbox(1)"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80" alt="Theme decoration service Mohali"><figcaption>Theme Decoration, Mohali</figcaption></figure>
-      <figure onclick="openLightbox(2)"><img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Corporate event organisers Chandigarh"><figcaption>Corporate Event Setup</figcaption></figure>
-      <figure onclick="openLightbox(3)"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Destination wedding planner Chandigarh"><figcaption>Destination Wedding</figcaption></figure>
-      <figure onclick="openLightbox(4)"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Wedding decorators Chandigarh evening decor"><figcaption>Evening Reception Decor</figcaption></figure>
-      <figure onclick="openLightbox(5)"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Best wedding planner in Chandigarh venue styling"><figcaption>Venue Styling</figcaption></figure>
-      <figure onclick="openLightbox(6)"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Birthday party organisers Chandigarh balloon decor"><figcaption>Birthday Celebration</figcaption></figure>
-      <figure onclick="openLightbox(7)"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Social events planner Chandigarh gathering"><figcaption>Social Gathering</figcaption></figure>
-      <figure onclick="openLightbox(8)"><img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=800&q=80" alt="Wedding decorators in Chandigarh floral styling"><figcaption>Floral & Stage Design</figcaption></figure>
+    <h2>9 real celebrations from Chandigarh, Mohali &amp; Panchkula, in motion</h2>
+    <p class="lead">A running reel of 9 real setups from weddings, corporate events and birthdays we've styled across Chandigarh, Mohali, Panchkula and Zirakpur. Tap any photo to view it full-size, or <a href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener">visit our Chandigarh studio</a> to see full portfolios in person.</p>
+  </div>
+  <div class="gallery-viewport">
+    <div class="gallery" id="galleryTrack">
+      <figure onclick="openLightbox(0)"><span class="g-num">01 / 09</span><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Wedding ceremony decor by TCC Events, Chandigarh"><figcaption>Mandap &amp; Ceremony Styling — Chandigarh</figcaption></figure>
+      <figure onclick="openLightbox(1)"><span class="g-num">02 / 09</span><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80" alt="Theme decoration service in Mohali"><figcaption>Theme Decoration — Mohali</figcaption></figure>
+      <figure onclick="openLightbox(2)"><span class="g-num">03 / 09</span><img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Corporate event organisers in Chandigarh"><figcaption>Corporate Event Setup — Chandigarh</figcaption></figure>
+      <figure onclick="openLightbox(3)"><span class="g-num">04 / 09</span><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Destination wedding planner in Chandigarh"><figcaption>Destination Wedding</figcaption></figure>
+      <figure onclick="openLightbox(4)"><span class="g-num">05 / 09</span><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Wedding decorators in Chandigarh, evening decor"><figcaption>Evening Reception Decor — Zirakpur</figcaption></figure>
+      <figure onclick="openLightbox(5)"><span class="g-num">06 / 09</span><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Best wedding planner in Chandigarh venue styling"><figcaption>Venue Styling — Panchkula</figcaption></figure>
+      <figure onclick="openLightbox(6)"><span class="g-num">07 / 09</span><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Birthday party organisers in Chandigarh, balloon decor"><figcaption>Birthday Celebration — Chandigarh</figcaption></figure>
+      <figure onclick="openLightbox(7)"><span class="g-num">08 / 09</span><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Social events planner in Chandigarh gathering"><figcaption>Social Gathering — Mohali</figcaption></figure>
+      <figure onclick="openLightbox(8)"><span class="g-num">09 / 09</span><img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=800&q=80" alt="Wedding decorators in Chandigarh, floral styling"><figcaption>Floral &amp; Stage Design — Chandigarh</figcaption></figure>
+      <!-- duplicate set for seamless loop -->
+      <figure onclick="openLightbox(0)" aria-hidden="true"><span class="g-num">01 / 09</span><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Wedding ceremony decor by TCC Events, Chandigarh"><figcaption>Mandap &amp; Ceremony Styling — Chandigarh</figcaption></figure>
+      <figure onclick="openLightbox(1)" aria-hidden="true"><span class="g-num">02 / 09</span><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80" alt="Theme decoration service in Mohali"><figcaption>Theme Decoration — Mohali</figcaption></figure>
+      <figure onclick="openLightbox(2)" aria-hidden="true"><span class="g-num">03 / 09</span><img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Corporate event organisers in Chandigarh"><figcaption>Corporate Event Setup — Chandigarh</figcaption></figure>
+      <figure onclick="openLightbox(3)" aria-hidden="true"><span class="g-num">04 / 09</span><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Destination wedding planner in Chandigarh"><figcaption>Destination Wedding</figcaption></figure>
+      <figure onclick="openLightbox(4)" aria-hidden="true"><span class="g-num">05 / 09</span><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Wedding decorators in Chandigarh, evening decor"><figcaption>Evening Reception Decor — Zirakpur</figcaption></figure>
+      <figure onclick="openLightbox(5)" aria-hidden="true"><span class="g-num">06 / 09</span><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Best wedding planner in Chandigarh venue styling"><figcaption>Venue Styling — Panchkula</figcaption></figure>
+      <figure onclick="openLightbox(6)" aria-hidden="true"><span class="g-num">07 / 09</span><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Birthday party organisers in Chandigarh, balloon decor"><figcaption>Birthday Celebration — Chandigarh</figcaption></figure>
+      <figure onclick="openLightbox(7)" aria-hidden="true"><span class="g-num">08 / 09</span><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Social events planner in Chandigarh gathering"><figcaption>Social Gathering — Mohali</figcaption></figure>
+      <figure onclick="openLightbox(8)" aria-hidden="true"><span class="g-num">09 / 09</span><img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=800&q=80" alt="Wedding decorators in Chandigarh, floral styling"><figcaption>Floral &amp; Stage Design — Chandigarh</figcaption></figure>
     </div>
   </div>
+  <div class="wrap"><p class="gallery-note">Showing 9 of 450+ real celebrations styled across Chandigarh, Mohali, Panchkula and Zirakpur. Hover to pause the reel.</p></div>
 </section>
 
 <div class="lightbox" id="lightbox">
@@ -310,10 +328,10 @@
       <span class="tag">Why TCC Events</span>
       <h2>What clients notice when they compare event management companies in Chandigarh</h2>
       <div class="why-grid">
-        <div class="why-item"><h3>One point of contact, not five vendors</h3><p>Decor, catering coordination, venue and entertainment run through a single planning team, so nothing falls between the cracks.</p></div>
-        <div class="why-item"><h3>Design first, logistics second</h3><p>We sketch the theme and mood before we source anything, so the final setup looks intentional, not assembled.</p></div>
+        <div class="why-item"><h3>One point of contact, not five vendors</h3><p>Decor, catering coordination, venue and entertainment run through a single planning team based in Chandigarh, so nothing falls between the cracks.</p></div>
+        <div class="why-item"><h3>Design first, logistics second</h3><p>We sketch the theme and mood before we source anything, so the final setup looks intentional, not assembled — every time, in Chandigarh, Mohali or Panchkula.</p></div>
         <div class="why-item"><h3>Local venue relationships</h3><p>Years of working across Chandigarh, Mohali and Panchkula venues means faster approvals and fewer surprises on the day. Our <a href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener" style="color:var(--marigold-soft);">central office location</a> keeps us close to most Tricity venues too.</p></div>
-        <div class="why-item"><h3>Built for every scale</h3><p>From a 40-guest roka to a 600-guest destination wedding or a mall activation — the same rigor, sized to your event.</p></div>
+        <div class="why-item"><h3>Built for every scale</h3><p>From a 40-guest roka in Zirakpur to a 600-guest destination wedding or a mall activation in Panchkula — the same rigor, sized to your event. See us on <a href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener" style="color:var(--marigold-soft);">Google Maps</a>.</p></div>
       </div>
     </div>
   </div>
@@ -324,10 +342,10 @@
     <span class="tag">How We Work</span>
     <h2>From first call to final setup</h2>
     <div class="process-row">
-      <div class="p-step"><div class="dot">1</div><h3>Discovery</h3><p>We learn your guest count, budget, venue and the feeling you want the day to have.</p></div>
-      <div class="p-step"><div class="dot">2</div><h3>Design</h3><p>Theme, colour palette, stage and floral direction are mapped out before any booking happens.</p></div>
-      <div class="p-step"><div class="dot">3</div><h3>Coordination</h3><p>Vendors, venue and timelines are locked in and tracked so every piece arrives on cue.</p></div>
-      <div class="p-step"><div class="dot">4</div><h3>Execution</h3><p>Our team is on-site managing setup, flow and last-minute details so you don't have to be.</p></div>
+      <div class="p-step"><div class="dot">1</div><h3>Discovery</h3><p>We learn your guest count, budget, venue and the feeling you want the day to have — usually starting at our Chandigarh office.</p></div>
+      <div class="p-step"><div class="dot">2</div><h3>Design</h3><p>Theme, colour palette, stage and floral direction are mapped out before any booking happens, tailored to your Chandigarh, Mohali or Panchkula venue.</p></div>
+      <div class="p-step"><div class="dot">3</div><h3>Coordination</h3><p>Vendors, venue and timelines across the Tricity are locked in and tracked so every piece arrives on cue.</p></div>
+      <div class="p-step"><div class="dot">4</div><h3>Execution</h3><p>Our team is on-site in Chandigarh, Mohali, Panchkula or Zirakpur — managing setup, flow and last-minute details so you don't have to be.</p></div>
     </div>
   </div>
 </section>
@@ -337,6 +355,7 @@
     <div class="wrap">
       <span class="tag">Client Notes</span>
       <h2>What families and brands say after working with us</h2>
+      <p class="lead">Verified through calls, site visits and our <a href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener">Google Business listing</a> — real clients from Chandigarh, Mohali and Panchkula.</p>
       <div class="testi-track">
         <div class="testi-card">
           <span class="stars">★★★★★</span>
@@ -351,7 +370,7 @@
         <div class="testi-card">
           <span class="stars">★★★★★</span>
           <p>Planning our daughter's destination wedding from abroad felt impossible until we found TCC Events. They ran everything on the ground and kept us updated at every step.</p>
-          <div class="testi-who"><div class="testi-avatar">S</div><div><b>Simran Kaur</b><span>Destination Wedding</span></div></div>
+          <div class="testi-who"><div class="testi-avatar">S</div><div><b>Simran Kaur</b><span>Destination Wedding, planned from Chandigarh</span></div></div>
         </div>
       </div>
     </div>
@@ -462,7 +481,7 @@
   const galleryCaps = Array.from(document.querySelectorAll('.gallery figcaption'));
   function openLightbox(i){
     document.getElementById('lightbox-img').src = galleryImgs[i].src;
-    document.getElementById('lightbox-cap').textContent = galleryCaps[i].textContent;
+    document.getElementById('lightbox-cap').textContent = (i+1).toString().padStart(2,'0') + ' / 09 — ' + galleryCaps[i].textContent;
     document.getElementById('lightbox').classList.add('open');
   }
   function closeLightbox(){ document.getElementById('lightbox').classList.remove('open'); }
