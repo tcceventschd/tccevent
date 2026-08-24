@@ -11,16 +11,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --teal:#0d3b3e;
-    --teal-deep:#082527;
-    --coral:#e8623f;
-    --coral-soft:#f0916f;
-    --sand:#f7ede1;
-    --sand-2:#fbf6ee;
-    --gold:#d4a24c;
-    --ink:#1c2b2b;
-    --muted:#5c6a68;
-    --line:rgba(13,59,62,0.14);
+    --teal:#0f4c81;
+    --teal-deep:#082c4d;
+    --coral:#d4a24c;
+    --coral-soft:#e8c07d;
+    --sand:#eef5fb;
+    --sand-2:#f8fbfd;
+    --gold:#0f4c81;
+    --ink:#122436;
+    --muted:#5b6b7a;
+    --line:rgba(15,76,129,0.14);
     --white:#ffffff;
   }
   *{box-sizing:border-box;}
@@ -107,17 +107,24 @@
     .atable-row .col1{font-size:13.5px;}
   }
 
-  /* SHOWREEL - real autoplay video, fast, non-clickable, no controls */
+  /* SHOWREEL - fast auto-playing image slideshow, non-clickable, no controls */
   .showreel-wrap{padding:0;position:relative;}
   .showreel{position:relative;height:52vh;min-height:320px;overflow:hidden;pointer-events:none;background:var(--teal-deep);}
-  .showreel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-  .showreel::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,37,39,0.15), rgba(8,37,39,0.55));z-index:2;pointer-events:none;}
-  .showreel-tag{position:absolute;top:22px;left:22px;z-index:3;display:flex;align-items:center;gap:8px;background:rgba(8,37,39,0.55);color:#fff;padding:8px 16px;border-radius:999px;font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;backdrop-filter:blur(3px);}
+  .showreel .frame{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation-name:reelCycle;animation-duration:7s;animation-iteration-count:infinite;animation-timing-function:ease-in-out;}
+  @keyframes reelCycle{
+    0%{opacity:0;transform:scale(1.15);}
+    3%{opacity:1;transform:scale(1.04);}
+    12%{opacity:1;transform:scale(1);}
+    15%{opacity:0;transform:scale(0.98);}
+    100%{opacity:0;}
+  }
+  .showreel::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,44,77,0.15), rgba(8,44,77,0.6));z-index:2;pointer-events:none;}
+  .showreel-tag{position:absolute;top:22px;left:22px;z-index:3;display:flex;align-items:center;gap:8px;background:rgba(8,44,77,0.6);color:#fff;padding:8px 16px;border-radius:999px;font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;backdrop-filter:blur(3px);}
   .showreel-tag .dot{width:8px;height:8px;border-radius:50%;background:var(--coral);animation:pulseDot 1s ease-in-out infinite;}
   @keyframes pulseDot{0%,100%{opacity:1;}50%{opacity:0.35;}}
   .showreel-caption{position:absolute;bottom:24px;left:22px;right:22px;z-index:3;color:#fff;text-align:left;}
   .showreel-caption h2{color:#fff;font-size:clamp(22px,3vw,32px);}
-  .showreel-caption p{color:rgba(247,237,225,0.82);font-size:14px;margin:6px 0 0;max-width:520px;}
+  .showreel-caption p{color:rgba(255,255,255,0.85);font-size:14px;margin:6px 0 0;max-width:520px;}
 
   /* services */
   .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;}
@@ -260,9 +267,13 @@
 
 <div class="showreel-wrap">
   <div class="showreel">
-    <video autoplay muted loop playsinline id="reelVideo">
-      <source src="https://assets.mixkit.co/videos/5217/5217-720.mp4" type="video/mp4">
-    </video>
+    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80');animation-delay:0s;"></div>
+    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1400&q=80');animation-delay:-1s;"></div>
+    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1400&q=80');animation-delay:-2s;"></div>
+    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1400&q=80');animation-delay:-3s;"></div>
+    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1400&q=80');animation-delay:-4s;"></div>
+    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1400&q=80');animation-delay:-5s;"></div>
+    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1400&q=80');animation-delay:-6s;"></div>
     <span class="showreel-tag"><span class="dot"></span>Showreel</span>
     <div class="showreel-caption">
       <h2>Weddings &amp; events, in motion</h2>
@@ -321,13 +332,6 @@
 </footer>
 
 <script>
-  // speed up showreel video playback
-  const reelVideo = document.getElementById('reelVideo');
-  if(reelVideo){
-    reelVideo.playbackRate = 1.75;
-    reelVideo.addEventListener('loadedmetadata', ()=>{ reelVideo.playbackRate = 1.75; });
-  }
-
   const rows = document.querySelectorAll('.atable-row:not(.header)');
   const obs = new IntersectionObserver((entries)=>{
     entries.forEach((entry, idx)=>{
