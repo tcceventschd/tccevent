@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="aRvF_VawhyACcyfSczO3Eakuhg88CRdhordQgw61PX4">
 <title>Wedding Planner &amp; Event Management Company in Chandigarh | TCC Events</title>
 <meta name="description" content="TCC Events — wedding planner in Chandigarh, corporate event organisers, wedding decorators and theme decoration service in Mohali. Explore our services by category and find us on Google Maps." />
 <meta name="keywords" content="wedding planner in chandigarh, best wedding planner in chandigarh, corporate event organisers in chandigarh, wedding decorators in chandigarh, event management company in chandigarh, best event company near me, birthday party organisers chandigarh, mall decor planner in chandigarh, Theme Decoration Service in Mohali, destination wedding planner in chandigarh, social events planner in chandigarh, venue management company" />
@@ -43,18 +44,34 @@
   .navcall:hover{background:var(--teal);}
 
   /* hero */
-  .hero{position:relative;padding:90px 0 70px;overflow:hidden;background:linear-gradient(160deg, var(--teal) 0%, var(--teal-deep) 100%);color:#fff;}
-  .hero::before{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle, rgba(232,98,63,0.35), transparent 70%);}
-  .hero-inner{position:relative;z-index:1;max-width:760px;}
+  .hero{position:relative;padding:60px 0 0;overflow:hidden;background:linear-gradient(160deg, var(--teal) 0%, var(--teal-deep) 100%);color:#fff;}
+  .hero::before{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle, rgba(212,162,76,0.3), transparent 70%);}
+  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr 0.85fr;gap:36px;align-items:center;padding-bottom:0;}
+  .hero-inner{max-width:620px;padding-bottom:56px;}
   .eyebrow{display:inline-block;font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--coral-soft);font-weight:700;margin-bottom:14px;}
-  .hero h1{color:#fff;font-size:clamp(30px,4.6vw,50px);line-height:1.15;margin-bottom:16px;}
-  .hero p{color:rgba(247,237,225,0.85);font-size:16.5px;max-width:600px;margin:0 0 26px;}
-  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
+  .hero h1{color:#fff;font-size:clamp(28px,4vw,46px);line-height:1.16;margin-bottom:16px;}
+  .hero p{color:rgba(238,245,251,0.85);font-size:16px;max-width:560px;margin:0 0 22px;}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px;}
   .btn{padding:13px 24px;border-radius:999px;font-weight:700;font-size:14px;}
   .btn-solid{background:var(--coral);color:#fff;}
   .btn-solid:hover{background:var(--gold);}
   .btn-ghost{border:1px solid rgba(255,255,255,0.5);color:#fff;}
   .btn-ghost:hover{background:rgba(255,255,255,0.12);}
+  .hero-trust{display:flex;gap:24px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.16);padding-top:18px;}
+  .hero-trust div{display:flex;flex-direction:column;}
+  .hero-trust b{font-family:'Playfair Display',serif;font-size:22px;color:var(--coral-soft);}
+  .hero-trust span{font-size:11.5px;letter-spacing:0.8px;text-transform:uppercase;color:rgba(238,245,251,0.7);}
+
+  .hero-visual{position:relative;height:100%;min-height:340px;padding-bottom:40px;}
+  .hero-collage{position:relative;height:100%;}
+  .hero-collage img{position:absolute;object-fit:cover;border-radius:12px;box-shadow:0 18px 40px rgba(8,44,77,0.35);border:4px solid rgba(255,255,255,0.15);}
+  .hc-1{width:62%;height:260px;top:0;right:0;}
+  .hc-2{width:46%;height:190px;bottom:-30px;left:0;z-index:2;}
+  .hero-pin{position:absolute;bottom:-18px;left:38%;z-index:3;background:#fff;color:var(--teal);padding:10px 16px;border-radius:10px;font-size:12.5px;font-weight:700;box-shadow:0 12px 24px rgba(8,44,77,0.3);display:flex;align-items:center;gap:6px;}
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-visual{display:none;}
+  }
 
   .section{padding:76px 0;}
   .section.tight{padding:48px 0;}
@@ -126,6 +143,22 @@
   .showreel-caption h2{color:#fff;font-size:clamp(22px,3vw,32px);}
   .showreel-caption p{color:rgba(255,255,255,0.85);font-size:14px;margin:6px 0 0;max-width:520px;}
 
+  /* picks gallery */
+  .picks-tabs{display:flex;gap:10px;margin-top:36px;margin-bottom:24px;}
+  .picks-tabs span{font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:9px 18px;border-radius:999px;background:var(--white);border:1px solid var(--line);color:var(--muted);}
+  .picks-tabs span.marriage{color:var(--coral);border-color:var(--coral);}
+  .picks-tabs span.company{color:var(--teal);border-color:var(--teal);}
+  .picks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .pick-box{position:relative;border-radius:10px;overflow:hidden;height:210px;box-shadow:0 10px 24px rgba(15,76,129,0.12);}
+  .pick-box img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;}
+  .pick-box:hover img{transform:scale(1.08);}
+  .pick-box .pick-tag{position:absolute;top:10px;left:10px;background:rgba(8,44,77,0.7);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:5px 10px;border-radius:999px;}
+  .pick-box .pick-tag.company{background:rgba(212,162,76,0.85);color:var(--teal-deep);}
+  .picks-row{margin-bottom:16px;}
+  .picks-row-label{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:28px 0 12px;}
+  @media(max-width:900px){.picks-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.picks-grid{grid-template-columns:1fr;}}
+
   /* services */
   .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;}
   .service-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:26px 24px;transition:0.25s ease;}
@@ -174,13 +207,30 @@
 </nav>
 
 <section class="hero">
-  <div class="wrap hero-inner">
-    <span class="eyebrow">Chandigarh · Mohali · Panchkula · Zirakpur</span>
-    <h1>Wedding Planner &amp; Event Management Company in Chandigarh</h1>
-    <p>Explore our work by category below — every photo links straight to our Google Maps location, so you can see where we're based before you call.</p>
-    <div class="hero-cta">
-      <a class="btn btn-solid" href="tel:9915730029">Call 9915730029</a>
-      <a class="btn btn-ghost" href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener">Find Us on Maps</a>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-inner">
+        <span class="eyebrow">Chandigarh · Mohali · Panchkula · Zirakpur</span>
+        <h1>Wedding Planner &amp; Event Management Company in Chandigarh</h1>
+        <p>From mandap to boardroom — TCC Events plans weddings, corporate events, birthdays and social celebrations with one in-house team. Explore our work by category below, or scroll down to see real picks from recent weddings and company events.</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="tel:9915730029">Call 9915730029</a>
+          <a class="btn btn-ghost" href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener">Find Us on Maps</a>
+        </div>
+        <div class="hero-trust">
+          <div><b>9+ Yrs</b><span>In Chandigarh</span></div>
+          <div><b>450+</b><span>Events Styled</span></div>
+          <div><b>60+</b><span>Venues Covered</span></div>
+          <div><b>4.8★</b><span>Google Rating</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-collage">
+          <img class="hc-1" src="https://images.pexels.com/photos/34079355/pexels-photo-34079355.jpeg?h=700&w=900&fit=crop" alt="Wedding decorators in Chandigarh - floral mandap">
+          <img class="hc-2" src="https://images.pexels.com/photos/1181304/pexels-photo-1181304.jpeg?h=500&w=700&fit=crop" alt="Corporate event organisers in Chandigarh - conference room">
+          <span class="hero-pin">📍 Chandigarh Based</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -267,13 +317,9 @@
 
 <div class="showreel-wrap">
   <div class="showreel">
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80');animation-delay:0s;"></div>
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1400&q=80');animation-delay:-1s;"></div>
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1400&q=80');animation-delay:-2s;"></div>
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1400&q=80');animation-delay:-3s;"></div>
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1400&q=80');animation-delay:-4s;"></div>
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1400&q=80');animation-delay:-5s;"></div>
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1400&q=80');animation-delay:-6s;"></div>
+    <div class="frame" style="background-image:url('https://images.pexels.com/photos/33417236/pexels-photo-33417236.jpeg?h=1000&w=1600&fit=crop');animation-delay:0s;"></div>
+    <div class="frame" style="background-image:url('https://images.pexels.com/photos/14395559/pexels-photo-14395559.jpeg?h=1000&w=1600&fit=crop');animation-delay:-2.3s;"></div>
+    <div class="frame" style="background-image:url('https://images.pexels.com/photos/30184621/pexels-photo-30184621.jpeg?h=1000&w=1600&fit=crop');animation-delay:-4.6s;"></div>
     <span class="showreel-tag"><span class="dot"></span>Showreel</span>
     <div class="showreel-caption">
       <h2>Weddings &amp; events, in motion</h2>
@@ -281,6 +327,32 @@
     </div>
   </div>
 </div>
+
+<section class="section tight" id="picks">
+  <div class="wrap">
+    <span class="tag">Our Picks</span>
+    <h2>Real picks from recent weddings &amp; company events</h2>
+    <p class="lead">A closer look at two sides of our work — real wedding decor from couples across Chandigarh, and real corporate setups from our business clients.</p>
+
+    <div class="picks-row-label">Marriage Picks</div>
+    <div class="picks-grid">
+      <div class="pick-box"><span class="pick-tag">Wedding</span><img src="https://images.pexels.com/photos/33417236/pexels-photo-33417236.jpeg?h=500&w=500&fit=crop" alt="Wedding planner in Chandigarh - mandap decor pick"></div>
+      <div class="pick-box"><span class="pick-tag">Wedding</span><img src="https://images.pexels.com/photos/34079355/pexels-photo-34079355.jpeg?h=500&w=500&fit=crop" alt="Wedding decorators in Chandigarh - floral chandelier mandap"></div>
+      <div class="pick-box"><span class="pick-tag">Wedding</span><img src="https://images.pexels.com/photos/14395559/pexels-photo-14395559.jpeg?h=500&w=500&fit=crop" alt="Theme Decoration Service in Mohali - stage with garlands"></div>
+      <div class="pick-box"><span class="pick-tag">Wedding</span><img src="https://images.pexels.com/photos/12432503/pexels-photo-12432503.jpeg?h=500&w=500&fit=crop" alt="Destination wedding planner in Chandigarh - indoor stage decor"></div>
+    </div>
+
+    <div class="picks-row-label">Company Event Picks</div>
+    <div class="picks-grid">
+      <div class="pick-box"><span class="pick-tag company">Corporate</span><img src="https://images.pexels.com/photos/1181304/pexels-photo-1181304.jpeg?h=500&w=500&fit=crop" alt="Corporate event organisers in Chandigarh - conference room setup"></div>
+      <div class="pick-box"><span class="pick-tag company">Corporate</span><img src="https://images.pexels.com/photos/261013/pexels-photo-261013.jpeg?h=500&w=500&fit=crop" alt="Event management company in Chandigarh - business meeting"></div>
+      <div class="pick-box"><span class="pick-tag company">Corporate</span><img src="https://images.pexels.com/photos/30184621/pexels-photo-30184621.jpeg?h=500&w=500&fit=crop" alt="Best event company near me - outdoor company celebration"></div>
+      <div class="pick-box"><span class="pick-tag company">Corporate</span><img src="https://images.pexels.com/photos/32325269/pexels-photo-32325269.jpeg?h=500&w=500&fit=crop" alt="Venue management company - indoor event gathering"></div>
+    </div>
+
+    <p style="margin-top:22px;font-size:14px;color:var(--muted);">See more of our work, or find us directly on <a href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7" target="_blank" rel="noopener" style="color:var(--teal);font-weight:700;">Google Maps</a>.</p>
+  </div>
+</section>
 
 <section class="section" id="services">
   <div class="wrap">
