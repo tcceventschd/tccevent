@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="aRvF_VawhyACcyfSczO3Eakuhg88CRdhordQgw61PX4">
 <title>Wedding Planner &amp; Event Management Company in Chandigarh | TCC Events</title>
 <meta name="description" content="TCC Events — wedding planner in Chandigarh, corporate event organisers, wedding decorators and theme decoration service in Mohali. Explore our services by category and find us on Google Maps." />
 <meta name="keywords" content="wedding planner in chandigarh, best wedding planner in chandigarh, corporate event organisers in chandigarh, wedding decorators in chandigarh, event management company in chandigarh, best event company near me, birthday party organisers chandigarh, mall decor planner in chandigarh, Theme Decoration Service in Mohali, destination wedding planner in chandigarh, social events planner in chandigarh, venue management company" />
@@ -108,17 +107,10 @@
     .atable-row .col1{font-size:13.5px;}
   }
 
-  /* SHOWREEL - fast autoplay video-style loop, non-clickable */
+  /* SHOWREEL - real autoplay video, fast, non-clickable, no controls */
   .showreel-wrap{padding:0;position:relative;}
   .showreel{position:relative;height:52vh;min-height:320px;overflow:hidden;pointer-events:none;background:var(--teal-deep);}
-  .showreel .frame{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation-name:reelCycle;animation-duration:7s;animation-iteration-count:infinite;animation-timing-function:ease-in-out;}
-  @keyframes reelCycle{
-    0%{opacity:0;transform:scale(1.18);}
-    3%{opacity:1;transform:scale(1.05);}
-    12%{opacity:1;transform:scale(1);}
-    15%{opacity:0;transform:scale(0.98);}
-    100%{opacity:0;}
-  }
+  .showreel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
   .showreel::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,37,39,0.15), rgba(8,37,39,0.55));z-index:2;pointer-events:none;}
   .showreel-tag{position:absolute;top:22px;left:22px;z-index:3;display:flex;align-items:center;gap:8px;background:rgba(8,37,39,0.55);color:#fff;padding:8px 16px;border-radius:999px;font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;backdrop-filter:blur(3px);}
   .showreel-tag .dot{width:8px;height:8px;border-radius:50%;background:var(--coral);animation:pulseDot 1s ease-in-out infinite;}
@@ -268,14 +260,10 @@
 
 <div class="showreel-wrap">
   <div class="showreel">
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80');animation-delay:-0s;"></div>
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1400&q=80');animation-delay:-1s;"></div>
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1400&q=80');animation-delay:-2s;"></div>
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1400&q=80');animation-delay:-3s;"></div>
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1400&q=80');animation-delay:-4s;"></div>
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1400&q=80');animation-delay:-5s;"></div>
-    <div class="frame" style="background-image:url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1400&q=80');animation-delay:-6s;"></div>
-    <span class="showreel-tag"><span class="dot"></span>Live Reel</span>
+    <video autoplay muted loop playsinline id="reelVideo">
+      <source src="https://assets.mixkit.co/videos/5217/5217-720.mp4" type="video/mp4">
+    </video>
+    <span class="showreel-tag"><span class="dot"></span>Showreel</span>
     <div class="showreel-caption">
       <h2>Weddings &amp; events, in motion</h2>
       <p>A running look at real setups from our wedding planning, corporate events and decor work across Chandigarh, Mohali and Panchkula.</p>
@@ -333,7 +321,13 @@
 </footer>
 
 <script>
-  // animate table rows on scroll
+  // speed up showreel video playback
+  const reelVideo = document.getElementById('reelVideo');
+  if(reelVideo){
+    reelVideo.playbackRate = 1.75;
+    reelVideo.addEventListener('loadedmetadata', ()=>{ reelVideo.playbackRate = 1.75; });
+  }
+
   const rows = document.querySelectorAll('.atable-row:not(.header)');
   const obs = new IntersectionObserver((entries)=>{
     entries.forEach((entry, idx)=>{
