@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wedding Planner in Chandigarh | TCC - The Celebration Company</title>
+
+  <meta name="description" content="Looking for a wedding planner in Chandigarh? TCC - The Celebration Company plans elegant weddings, decor, celebrations and memorable events across Chandigarh, Mohali, Panchkula and nearby areas.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f5f2;
+      color: #2c2530;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* =========================
+       ANIMATIONS
+    ========================= */
+
+    @keyframes floatBubble {
+      0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+      }
+      25% {
+        transform: translateY(-18px) translateX(10px) rotate(8deg);
+      }
+      50% {
+        transform: translateY(-5px) translateX(-10px) rotate(15deg);
+      }
+      75% {
+        transform: translateY(12px) translateX(6px) rotate(7deg);
+      }
+    }
+
+    @keyframes gentleBob {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-9px);
+      }
+    }
+
+    @keyframes iconMove {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-5px) rotate(6deg);
+      }
+    }
+
+    @keyframes pulsePin {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(179, 126, 94, 0.45);
+      }
+      70% {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 13px rgba(179, 126, 94, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(179, 126, 94, 0);
+      }
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 670px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 100px 20px;
+      color: #ffffff;
+      background:
+        linear-gradient(
+          135deg,
+          #2b172c 0%,
+          #623f55 48%,
+          #b37e5e 100%
+        );
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(3px);
+      opacity: 0.28;
+      pointer-events: none;
+      animation: floatBubble 11s ease-in-out infinite;
+    }
+
+    .bubble-1 {
+      width: 190px;
+      height: 190px;
+      background: #f4d8c9;
+      top: 8%;
+      left: 4%;
+    }
+
+    .bubble-2 {
+      width: 95px;
+      height: 95px;
+      background: #ffffff;
+      top: 17%;
+      right: 10%;
+      animation-delay: -3s;
+    }
+
+    .bubble-3 {
+      width: 240px;
+      height: 240px;
+      background: #d9a889;
+      right: -70px;
+      bottom: 2%;
+      animation-delay: -5s;
+    }
+
+    .bubble-4 {
+      width: 120px;
+      height: 120px;
+      background: #f5dcca;
+      left: 15%;
+      bottom: 8%;
+      animation-delay: -7s;
+    }
+
+    .bubble-5 {
+      width: 70px;
+      height: 70px;
+      background: #ffffff;
+      left: 47%;
+      top: 8%;
+      animation-delay: -2s;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: min(900px, 100%);
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 40px;
+      background: rgba(255, 255, 255, 0.09);
+      backdrop-filter: blur(7px);
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(40px, 6vw, 74px);
+      line-height: 1.08;
+      max-width: 900px;
+      margin: 0 auto 22px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 165px;
+      padding: 14px 23px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .btn-primary {
+      background: #ffffff;
+      color: #392037;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .btn-accent {
+      background: #d7a17e;
+      color: #241421;
+    }
+
+    /* =========================
+       FEATURE IMAGE
+    ========================= */
+
+    .image-section {
+      margin-top: -70px;
+      position: relative;
+      z-index: 5;
+      padding-bottom: 30px;
+    }
+
+    .main-image-wrap {
+      position: relative;
+      max-width: 1040px;
+      margin: auto;
+    }
+
+    .main-image {
+      width: 100%;
+      height: 510px;
+      object-fit: cover;
+      border-radius: 28px;
+      display: block;
+      box-shadow: 0 24px 70px rgba(45, 25, 43, 0.22);
+    }
+
+    .floating-badge {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+      animation: gentleBob 3.5s ease-in-out infinite;
+    }
+
+    /* =========================
+       MAIN CONTENT
+    ========================= */
+
+    .content-wrapper {
+      padding: 45px 0 80px;
+    }
+
+    .content-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 58px;
+      box-shadow: 0 16px 55px rgba(59, 31, 54, 0.08);
+    }
+
+    .section-block {
+      margin-bottom: 55px;
+    }
+
+    .section-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-block h2 {
+      color: #352035;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(27px, 4vw, 39px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-block p {
+      color: #645963;
+      font-size: 16px;
+    }
+
+    .text-link {
+      color: #9b624b;
+      text-decoration: none;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(155, 98, 75, 0.35);
+    }
+
+    .text-link:hover {
+      color: #5b3549;
+    }
+
+    /* Address Callout */
+
+    .address-callout {
+      margin: 35px 0 55px;
+      padding: 26px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #fbf4ef, #f4e6dc);
+      border: 1px solid #ecd4c5;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .pin-pulse {
+      width: 54px;
+      height: 54px;
+      min-width: 54px;
+      border-radius: 50%;
+      background: #b37e5e;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      animation: pulsePin 2.4s infinite;
+    }
+
+    .address-callout strong {
+      color: #422940;
+    }
+
+    .address-callout a {
+      color: #725143;
+      text-decoration: none;
+    }
+
+    /* Image Grid */
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .image-card {
+      overflow: hidden;
+      border-radius: 20px;
+      background: #f7f2ef;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.55s ease;
+    }
+
+    .image-card:hover img {
+      transform: scale(1.055);
+    }
+
+    .image-caption {
+      padding: 16px 18px;
+      color: #4f414b;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* Areas */
+
+    .area-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .area-tag {
+      padding: 9px 15px;
+      border-radius: 40px;
+      background: #f6ede8;
+      color: #774c3c;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* Service Cards */
+
+    .service-grid {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: #faf8f6;
+      border: 1px solid #eee4df;
+      padding: 28px 20px;
+      border-radius: 18px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 28px rgba(70, 42, 62, 0.08);
+    }
+
+    .service-icon {
+      font-size: 36px;
+      margin-bottom: 10px;
+      display: inline-block;
+      animation: iconMove 4s ease-in-out infinite;
+    }
+
+    .service-card:nth-child(2) .service-icon {
+      animation-delay: -1s;
+    }
+
+    .service-card:nth-child(3) .service-icon {
+      animation-delay: -2s;
+    }
+
+    .service-card:nth-child(4) .service-icon {
+      animation-delay: -3s;
+    }
+
+    .service-card:nth-child(5) .service-icon {
+      animation-delay: -1.5s;
+    }
+
+    .service-card:nth-child(6) .service-icon {
+      animation-delay: -2.5s;
+    }
+
+    .service-card h3 {
+      font-size: 16px;
+      color: #3d293a;
+    }
+
+    /* Benefits */
+
+    .benefit-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .benefit-pill {
+      background: #5a374f;
+      color: #ffffff;
+      padding: 11px 18px;
+      border-radius: 50px;
+      font-size: 14px;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .benefit-pill:hover {
+      transform: translateY(-4px) scale(1.03);
+      background: #b37e5e;
+    }
+
+    /* =========================
+       CONTACT BOX
+    ========================= */
+
+    .contact-section {
+      padding: 15px 0 80px;
+    }
+
+    .contact-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 55px;
+      color: #ffffff;
+      background: #261824;
+      box-shadow: 0 22px 55px rgba(37, 22, 35, 0.2);
+    }
+
+    .contact-box h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-intro {
+      color: rgba(255, 255, 255, 0.68);
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-grid {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-item {
+      padding: 20px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-item span {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: #d8a989;
+      margin-bottom: 5px;
+    }
+
+    .contact-item a {
+      color: #ffffff;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.12;
+      filter: blur(2px);
+      pointer-events: none;
+      animation: floatBubble 12s ease-in-out infinite;
+    }
+
+    .contact-bubble.cb-1 {
+      width: 190px;
+      height: 190px;
+      background: #e2b497;
+      right: -60px;
+      top: -60px;
+    }
+
+    .contact-bubble.cb-2 {
+      width: 90px;
+      height: 90px;
+      background: #ffffff;
+      right: 24%;
+      bottom: -20px;
+      animation-delay: -4s;
+    }
+
+    .contact-bubble.cb-3 {
+      width: 120px;
+      height: 120px;
+      background: #b37e5e;
+      left: -30px;
+      bottom: -40px;
+      animation-delay: -7s;
+    }
+
+    /* =========================
+       FINAL CTA
+    ========================= */
+
+    .final-cta {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      color: #ffffff;
+      padding: 90px 20px;
+      background: linear-gradient(135deg, #a66f54, #5b354d 55%, #2f1c31);
+    }
+
+    .final-cta-content {
+      position: relative;
+      z-index: 3;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .final-cta h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 5vw, 50px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .final-cta p {
+      color: rgba(255,255,255,0.85);
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .footer {
+      background: #1f151e;
+      color: rgba(255,255,255,0.58);
+      text-align: center;
+      padding: 22px;
+      font-size: 13px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 850px) {
+      .content-card {
+        padding: 36px 25px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .main-image {
+        height: 420px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        min-height: 620px;
+        padding: 80px 18px 110px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .button-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .main-image {
+        height: 340px;
+        border-radius: 20px;
+      }
+
+      .floating-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
+        right: 18px;
+        bottom: 18px;
+      }
+
+      .content-wrapper {
+        padding-top: 25px;
+      }
+
+      .content-card {
+        padding: 32px 20px;
+        border-radius: 20px;
+      }
+
+      .address-callout {
+        align-items: flex-start;
+      }
+
+      .image-card img {
+        height: 245px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        padding: 38px 22px;
+      }
+
+      .contact-box h2 {
+        font-size: 31px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+    <div class="bubble bubble-5"></div>
+
+    <div class="hero-content">
+      <div class="eyebrow">TCC · The Celebration Company</div>
+
+      <h1>Wedding Planner in Chandigarh</h1>
+
+      <p>
+        Celebrate your story with thoughtful planning, elegant décor and memorable experiences.
+        TCC brings creativity and seamless coordination together for celebrations across the Tricity.
+      </p>
+
+      <div class="button-row">
+        <a
+          href="https://tccevents.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          Visit Website
+        </a>
+
+        <a
+          href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline"
+        >
+          View Location
+        </a>
+
+        <a href="tel:+919915730029" class="btn btn-accent">
+          Call Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MAIN IMAGE -->
+  <section class="image-section">
+    <div class="container">
+      <div class="main-image-wrap">
+
+        <img
+          class="main-image"
+          src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=85"
+          alt="Elegant wedding event setup by a wedding planner in Chandigarh"
+        >
+
+        <div class="floating-badge" aria-hidden="true">
+          ✨
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTENT -->
+  <main class="content-wrapper">
+    <div class="container">
+
+      <article class="content-card">
+
+        <!-- INTRO -->
+        <section class="section-block">
+          <h2>Wedding Planner in Chandigarh for Beautiful Celebrations</h2>
+
+          <p>
+            Choosing the right <strong>wedding planner in Chandigarh</strong> can transform an
+            important celebration into a carefully coordinated experience. TCC – The Celebration
+            Company works on wedding planning, event décor, celebration concepts and event
+            coordination with attention to both aesthetics and execution.
+            Explore more about the team and its work on the
+            <a
+              class="text-link"
+              href="https://tccevents.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              official TCC Events website
+            </a>.
+          </p>
+        </section>
+
+
+        <!-- WHY SEARCH -->
+        <section class="section-block">
+          <h2>Why People Look for the Best Wedding Planner in Chandigarh</h2>
+
+          <p>
+            Weddings involve far more than selecting a venue and decorating a stage. Couples and
+            families searching for the <strong>best wedding planner in Chandigarh</strong> often
+            need support with design direction, décor, event coordination, guest experiences and
+            smooth execution. Professional planning helps bring these different elements together
+            while keeping the celebration consistent with the family's vision.
+          </p>
+        </section>
+
+
+        <!-- ADDRESS CALLOUT -->
+        <div class="address-callout">
+          <div class="pin-pulse" aria-hidden="true">📍</div>
+
+          <div>
+            <strong>Visit The Celebration Company</strong><br>
+
+            <a
+              href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Plot No. 177 G, Industrial Area Phase I, Chandigarh, 160002
+            </a>
+          </div>
+        </div>
+
+
+        <!-- IMAGE GRID -->
+        <section class="section-block">
+          <h2>Wedding Design That Creates an Experience</h2>
+
+          <p>
+            A professional <strong>wedding planner in Chandigarh</strong> considers how décor,
+            lighting, florals, stage design and guest movement work together rather than treating
+            every element separately. Thoughtful visual planning can make ceremonies, receptions,
+            sangeet evenings and other celebrations feel more cohesive.
+          </p>
+
+          <div class="image-grid">
+
+            <figure class="image-card">
+              <img
+                src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=85"
+                alt="Wedding floral decoration and celebration setup"
+              >
+              <figcaption class="image-caption">
+                Thoughtful décor concepts designed around the occasion
+              </figcaption>
+            </figure>
+
+            <figure class="image-card">
+              <img
+                src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=85"
+                alt="Luxury wedding table decoration and event styling"
+              >
+              <figcaption class="image-caption">
+                Elegant spaces created for memorable guest experiences
+              </figcaption>
+            </figure>
+
+          </div>
+        </section>
+
+
+        <!-- AREAS -->
+        <section class="section-block">
+          <h2>Wedding Planning Across Chandigarh and Nearby Areas</h2>
+
+          <p>
+            Families looking for a <strong>wedding planner in Chandigarh</strong> may also be
+            planning celebrations in nearby parts of the Tricity and surrounding region. TCC can
+            be contacted for event requirements in Chandigarh, Mohali, Panchkula, Zirakpur and
+            nearby locations. You can
+            <a
+              class="text-link"
+              href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              view the Chandigarh office location on Google Maps
+            </a>.
+          </p>
+
+          <div class="area-tags">
+            <span class="area-tag">Chandigarh</span>
+            <span class="area-tag">Mohali</span>
+            <span class="area-tag">Panchkula</span>
+            <span class="area-tag">Zirakpur</span>
+            <span class="area-tag">Tricity</span>
+            <span class="area-tag">Nearby Punjab</span>
+          </div>
+        </section>
+
+
+        <!-- SERVICES -->
+        <section class="section-block">
+          <h2>Wedding and Event Planning Services</h2>
+
+          <p>
+            Working with an experienced <strong>wedding planner in Chandigarh</strong> gives
+            families one point of coordination for multiple parts of their event. TCC focuses on
+            creating celebrations where planning and presentation complement each other.
+          </p>
+
+          <div class="service-grid">
+
+            <div class="service-card">
+              <div class="service-icon">💍</div>
+              <h3>Wedding Planning</h3>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">🌸</div>
+              <h3>Wedding Décor</h3>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">🎶</div>
+              <h3>Sangeet Events</h3>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">✨</div>
+              <h3>Theme Concepts</h3>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">🎉</div>
+              <h3>Special Celebrations</h3>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">🤝</div>
+              <h3>Event Coordination</h3>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- BENEFITS -->
+        <section class="section-block">
+          <h2>Benefits of Professional Wedding Planning</h2>
+
+          <p>
+            Selecting the <strong>best wedding planner in Chandigarh</strong> is about finding a
+            team capable of understanding the celebration as a complete experience. Professional
+            planning can improve coordination, maintain design consistency and help families focus
+            more on enjoying the occasion.
+          </p>
+
+          <div class="benefit-pills">
+            <span class="benefit-pill">Creative Event Concepts</span>
+            <span class="benefit-pill">Décor Coordination</span>
+            <span class="benefit-pill">Personalised Planning</span>
+            <span class="benefit-pill">Guest Experience Focus</span>
+            <span class="benefit-pill">Organised Execution</span>
+            <span class="benefit-pill">Local Event Expertise</span>
+          </div>
+        </section>
+
+
+        <!-- LOCAL EXPERIENCE -->
+        <section class="section-block">
+          <h2>A Chandigarh-Based Team for Your Celebration</h2>
+
+          <p>
+            Choosing a locally accessible <strong>wedding planner in Chandigarh</strong> can make
+            discussions, planning meetings and event coordination more convenient. The Celebration
+            Company is based at Industrial Area Phase I, Chandigarh. Families can
+            <a
+              class="text-link"
+              href="tel:+919915730029"
+            >
+              call 99157 30029
+            </a>
+            to discuss their requirements or
+            <a
+              class="text-link"
+              href="https://tccevents.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              visit tccevents.in
+            </a>
+            to learn more.
+          </p>
+        </section>
+
+
+        <!-- CLOSING -->
+        <section class="section-block">
+          <h2>Plan Your Wedding with The Celebration Company</h2>
+
+          <p>
+            If you are searching for a <strong>wedding planner in Chandigarh</strong> to help
+            shape your wedding, décor or special celebration, connect with TCC – The Celebration
+            Company. Explore the
+            <a
+              class="text-link"
+              href="https://tccevents.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TCC Events website
+            </a>,
+            check the
+            <a
+              class="text-link"
+              href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Maps location
+            </a>
+            or call the team directly to discuss your event.
+          </p>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+
+  <!-- CONTACT -->
+  <section class="contact-section">
+    <div class="container">
+
+      <div class="contact-box">
+
+        <div class="contact-bubble cb-1"></div>
+        <div class="contact-bubble cb-2"></div>
+        <div class="contact-bubble cb-3"></div>
+
+        <h2>Contact TCC Events</h2>
+
+        <p class="contact-intro">
+          Connect directly with The Celebration Company for wedding and event planning enquiries.
+        </p>
+
+        <div class="contact-grid">
+
+          <div class="contact-item">
+            <span>Website</span>
+            <a
+              href="https://tccevents.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://tccevents.in/
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <span>Google Maps</span>
+            <a
+              href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View TCC on Google Maps
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <span>Address</span>
+            <a
+              href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Plot No. 177 G, Industrial Area Phase I, Chandigarh, 160002
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <span>Phone</span>
+            <a href="tel:+919915730029">
+              +91 99157 30029
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <span>WhatsApp</span>
+            <a
+              href="https://wa.me/919915730029"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp +91 99157 30029
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <span>Email</span>
+            <a href="mailto:tanumehtani@tccevents.in">
+              tanumehtani@tccevents.in
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+
+    <div class="final-cta-content">
+
+      <h2>Turn Your Celebration Into a Beautiful Experience</h2>
+
+      <p>
+        Connect with TCC if you are looking for the <strong>best wedding planner in Chandigarh</strong>
+        for thoughtfully planned weddings, décor and memorable celebrations.
+      </p>
+
+      <div class="button-row">
+
+        <a
+          href="https://tccevents.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          Visit Website
+        </a>
+
+        <a
+          href="https://maps.app.goo.gl/tP4PLDPJbWaVQixV7"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline"
+        >
+          View Location
+        </a>
+
+        <a href="tel:+919915730029" class="btn btn-accent">
+          Call Now
+        </a>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <footer class="footer">
+    TCC – The Celebration Company · Plot No. 177 G, Industrial Area Phase I, Chandigarh 160002
+  </footer>
+
+</body>
+</html>
